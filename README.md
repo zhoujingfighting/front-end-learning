@@ -60,3 +60,5 @@ nodemon --watch main.js --exec 'electron .'
 
 ##### Demo项目(播放器应用)
 
+![image-20210601181822939](/Users/mima1234/Library/Application Support/typora-user-images/image-20210601181822939.png)
+
