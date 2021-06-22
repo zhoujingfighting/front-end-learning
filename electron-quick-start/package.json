@@ -19,5 +19,8 @@
   "devDependencies": {
     "bootstrap": "^5.0.1",
     "electron": "^13.0.1"
+  },
+  "dependencies": {
+    "timer.js": "^1.0.4"
   }
 }

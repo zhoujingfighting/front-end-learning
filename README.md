@@ -1,6 +1,15 @@
 ## front-end-learning
 
 ### 各种技术快捷键的分享
+
+#### node版本管理工具 - n
+
+```js
+npm i -g n //安装工具
+n nodeversion//选择安装node的版本
+然后可以自己选择对应的版本来满足自己的需求
+```
+
 #### electron
 
 ![image-20210601135009487](/Users/mima1234/Library/Application Support/typora-user-images/image-20210601135009487.png)
@@ -32,6 +41,10 @@ chrome开源项目：chromium
 
 ![image-20210601151729797](/Users/mima1234/Library/Application Support/typora-user-images/image-20210601151729797.png)
 
+![image-20210602100831183](/Users/mima1234/Library/Application Support/typora-user-images/image-20210602100831183.png)
+
+
+
 ##### 主进程
 
 - electron运行package.json的main脚本的进程成为主进程
@@ -39,6 +52,8 @@ chrome开源项目：chromium
 - 管理原声GUI，典型的窗口（BrowserWindow,Tray,Dock,Menu)
 - 创建渲染进程
 - 控制应用生命周期（app）
+- 创建并管理渲染进程
+- 可以使用和操作系统对接的Electron API
 
 ##### 渲染进程
 
@@ -57,6 +72,8 @@ An instance of a computer program that is being executed - 维基百科
 ```js
 nodemon --watch main.js --exec 'electron .'
 ```
+
+
 
 ##### Demo项目(播放器应用)
 
