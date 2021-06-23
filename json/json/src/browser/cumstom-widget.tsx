@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { injectable, postConstruct } from 'inversify'
 import { ReactWidget } from '@theia/core/lib/browser'
-import { SelfWidget } from './self-widget'
-export interface 
+
 @injectable()
 export class CustonmWidget extends ReactWidget{
 	static readonly ID = 'test:widget'
@@ -11,15 +10,17 @@ export class CustonmWidget extends ReactWidget{
  
 	@postConstruct()
 	protected async init():Promise<void>{
-		this.id = SelfWidget.ID
-		this.title.label = SelfWidget.LABEL
+		this.id = CustonmWidget.ID
+		this.title.label = CustonmWidget.LABEL
 		this.title.closable = true
 		this.title.iconClass = 'fa fa-window-maximize'//exmaple widget icon
 		this.update()//更新视图
 	}
+
 	setText(text:string){
 		this.text = text
 	}
+
 	protected render():React.ReactNode{
 		return (
 			<React.Fragment>
