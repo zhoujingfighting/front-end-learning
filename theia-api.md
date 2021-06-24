@@ -45,5 +45,9 @@ In most cases the default behavior of the `DebugSession` is enough. But it is po
 
 `DebugService`用来初始化一个新的`DebugSession`，这个模块会为配置和开始一个新的debug session提供很多功能模块。这个模块的工作原理如下，当用户想要debug但是又没有合适的debuggers与用户正在操作的模块相关联的话，这个时候可用的debuggers就会配置合适的debugg选项，当选中一些配置项时，可能就会通过补充缺失的值选项与增加/改变/移除一些属性值来解决
 
+#### editor
 
+The `@theia/editor` extension contributed functionality such as the `editor` widget, menu, keybindings, and navigation.
+
+`@theia/editor`这个扩展包为`editor`widget，菜单，快捷键绑定，导航等提供功能选项
 
