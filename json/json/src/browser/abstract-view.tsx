@@ -1,7 +1,7 @@
-import { injectable, interfaces } from "inversify";
+import { injectable } from "inversify";
 import { Command,CommandRegistry,MenuModelRegistry } from "@theia/core";
 import { SelfWidget } from './self-widget'
-import { AbstractViewContribution,bindViewContribution,CommonMenus, FrontendApplicationContribution, WidgetFactory } from "@theia/core/lib/browser";
+import { AbstractViewContribution,CommonMenus } from "@theia/core/lib/browser";
 const TestCommand: Command = {
 	id:'test',
 	label:'test'
@@ -39,16 +39,4 @@ export class WidgetContribution extends AbstractViewContribution<SelfWidget>{
 	// 	console.log(23123)
 	// 	return this.workspaceService.workspace?.resource 
 	// }
-}
-
-
-
-export const bindWidget = (bind: interfaces.Bind) =>{
-	bindViewContribution(bind,WidgetContribution)
-	bind(FrontendApplicationContribution).toService(WidgetContribution)
-	bind(SelfWidget).toSelf()
-	bind(WidgetFactory).toDynamicValue(ctx => ({
-        id: SelfWidget.ID,
-        createWidget: () => ctx.container.get<SelfWidget>(SelfWidget)
-    })).inSingletonScope();
 }
