@@ -12,6 +12,6 @@
     "lerna": "2.4.0"
   },
   "workspaces": [
-    "json", "browser-app", "electron-app"
+    "zhoujing-test/*", "browser-app", "electron-app"
   ]
 }
