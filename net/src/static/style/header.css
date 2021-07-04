@@ -75,6 +75,7 @@
 }
 .li-third{
 	flex: 1 1 0% !important;
+	background-color: #fff;
 }
 .li-fourth{
 	width:58px;

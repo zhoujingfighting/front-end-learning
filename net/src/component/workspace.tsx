@@ -2,18 +2,18 @@ import '@static/style/workspace.css'
 import { Modal, Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { Input ,Dropdown} from 'antd'
-import React, { MouseEvent } from 'react'
+import React from 'react'
 import { Menu } from 'antd';
-import service from '../static/apis/axios';
 import { WorkSpace } from '../static/types/workspace';
-import { TestComponent } from './test';
+import { TestComponent } from '../static/antdComponents/customModal';
 /**
  * @interface:interface should be put into a folder
  * @iflogin: login page can bring some data for next pages' render,so ,it can be a component with state
  */
-export const Menuprops:Array<string> = ['Active','All']
+export const Menuprops:  Array<string> = ['Active','All']
 export const MenuAddprops: Array<number> = [50,100,200]
 const WorkspaceComponent: React.FC<WorkSpace.WorkSpaceProps> = (props:WorkSpace.WorkSpaceProps) => {
+	console.log(props)
 	let [data,setData] = React.useState({})
 	let [menuData, setMenuData] = React.useState('Active')
 	let [menuAddData, setMenuAddData] = React.useState(50)
@@ -114,22 +114,11 @@ const WorkspaceComponent: React.FC<WorkSpace.WorkSpaceProps> = (props:WorkSpace.
 				</div>
 			</div>
 			<div className='workspaca-project-wrap'>
-				{/* <div>
-					No Active Workspaces
-				</div>
-				<div>
-					Prefix any git repository URL with gitpod.io/# or create a new workspace for a recently used project. Learn more
-				</div> */}
 				<div>
 					<Button type="primary" onClick = { ShowModal }>
 						New WorkSpace
 					</Button>
 				</div>
-				{/* <div>
-					<Button type="primary" onClick={ShowModal}>
-						View all Workspaces
-					</Button>
-				</div> */}
 				<div>
 					<Modal 
 							visible={visible} 
@@ -143,8 +132,6 @@ const WorkspaceComponent: React.FC<WorkSpace.WorkSpaceProps> = (props:WorkSpace.
 		</div>
 	)
 }
-/**
- * todo?conponent 之间的传值
- */
+
 export default WorkspaceComponent
 

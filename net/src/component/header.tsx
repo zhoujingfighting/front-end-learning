@@ -5,19 +5,20 @@ import WorkspaceComponent from './workspace'
 import SettingComponent from './setting'
 import { Menu, Dropdown} from 'antd';
 export const ArrayList: Array<string> = ['Workspaces','Settings','Docs','Community']
-const HeaderComponent:React.FC<React.PropsWithChildren<RouteComponentProps>> = (props:React.PropsWithChildren<RouteComponentProps>) => {
+const HeaderComponent: React.FC<React.PropsWithChildren<RouteComponentProps>> = (props: React.PropsWithChildren<RouteComponentProps>) => {
 	const history = props.history
-	const handleLiClick = (e:SyntheticEvent) => {
-		const value = (e.target as any).innerHTML
+	const handleLiClick = (e: SyntheticEvent) => {
+		const value = (e.target as any).innerHTML.toLowerCase()
+		console.log(value)
 		history.push(`/${value}`)
 	}
 	const menu = (
 		<Menu selectable>
 		  <Menu.Item key="0">
-			<a href="https://www.antgroup.com">Log out</a>
+			<a href="https: //www.antgroup.com">Log out</a>
 		  </Menu.Item>
 		  <Menu.Item key="1">
-			<a href="https://www.aliyun.com">Settings</a>
+			<a href="https: //www.aliyun.com">Settings</a>
 		  </Menu.Item>
 		  <Menu.Item key="3">Profiles</Menu.Item>
 		</Menu>
@@ -26,7 +27,7 @@ const HeaderComponent:React.FC<React.PropsWithChildren<RouteComponentProps>> = (
 		<div className='container'>
 			<div className='header-wrap'>
 				<div className='icon-wrap'>
-					<a href='https://www.zhihu.com'>
+					<a href='https: //www.zhihu.com'>
 						<img src='assets/images/DragonMedium.png' alt='' className='lab-img'/>
 					</a>
 				</div>
@@ -46,7 +47,12 @@ const HeaderComponent:React.FC<React.PropsWithChildren<RouteComponentProps>> = (
 								onClick={handleLiClick}
 							>Docs</li>
 							<li className='item-wrap li-fifth'
+								onClick={handleLiClick}
 							>Community</li>
+							 {/* 
+								here contains duplicates 
+								need sone modification
+							  */}
 						</ul>
 					</nav>
 					<Dropdown overlay={menu} trigger={['click']} placement='topLeft' >
@@ -66,7 +72,7 @@ const HeaderComponent:React.FC<React.PropsWithChildren<RouteComponentProps>> = (
 						<Route path='/settings' component = {SettingComponent}>
 						</Route>
 					</Switch>
-			</HashRouter>
+				</HashRouter>
 			</div>
 		</div>
 	)

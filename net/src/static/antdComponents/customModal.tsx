@@ -1,5 +1,5 @@
 import React from 'react'
-import {Tabs,List,Typography,Divider} from 'antd'
+import {Tabs,List,Typography} from 'antd'
 const { TabPane } = Tabs;
 /**
  * @param definition of props should be payed attension

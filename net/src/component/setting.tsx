@@ -1,6 +1,6 @@
 import React from 'react';
 import '@static/style/setting.css'
-const SettingComponent = ():React.ReactNode => {
+const SettingComponent = () => {
 	return (
 		<div className='setting-head-wrap'>
 			<div className='setting-title-wrap'>
