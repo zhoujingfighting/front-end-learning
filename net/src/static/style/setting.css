@@ -1,0 +1,34 @@
+.setting-head-wrap{
+	position: relative;
+	display: block;
+	padding-left:2.5rem;
+	padding-right: 2.5rem;
+	line-height: 1.5rem;
+	font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.setting-title-wrap{
+	height:8rem;
+	display: flex;
+	padding-bottom:2rem;
+	padding-top:1.5rem;	
+}
+.title-wrap{
+	line-height: 1.5rem;
+};
+h1{
+	font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+	font-size: 3rem;
+};
+h2{
+	color: #77716d;
+}
+.setting-bottom-line{
+	display: block;
+	position:absolute;
+	left:-20rem;
+	bottom:0;
+	width: 1000vw;
+	height: 0.125rem;
+	border-bottom: 1px solid rgb(231, 229, 228);
+}
