@@ -1,17 +1,14 @@
-import React, { SyntheticEvent } from 'react'
+import React from 'react'
 import '@static/style/header.css'
 import { HashRouter,Route,Switch,RouteComponentProps} from 'react-router-dom'
 import WorkspaceComponent from './workspace'
 import SettingComponent from './setting'
 import { Menu, Dropdown} from 'antd';
-export const ArrayList: Array<string> = ['Workspaces','Settings','Docs','Community']
+import { ArrayList,handleLiClick} from '../static/types/header'
+
 const HeaderComponent: React.FC<React.PropsWithChildren<RouteComponentProps>> = (props: React.PropsWithChildren<RouteComponentProps>) => {
 	const history = props.history
-	const handleLiClick = (e: SyntheticEvent) => {
-		const value = (e.target as any).innerHTML.toLowerCase()
-		console.log(value)
-		history.push(`/${value}`)
-	}
+	console.log(history)
 	const menu = (
 		<Menu selectable>
 		  <Menu.Item key="0">
@@ -34,25 +31,16 @@ const HeaderComponent: React.FC<React.PropsWithChildren<RouteComponentProps>> = 
 				<div className='workspace-wrap'>
 					<nav className='navigator'>
 						<ul className='li-wrap'>
-							<li className='item-wrap li-first'
-							onClick = {handleLiClick}
-							>Workspaces</li>
-							<li className='item-wrap li-second' 
-								onClick={handleLiClick}
-							>Settings</li>
-							<li className='item-wrap li-third'
-								onClick={handleLiClick}
-							></li>
-							<li className='item-wrap li-fourth'
-								onClick={handleLiClick}
-							>Docs</li>
-							<li className='item-wrap li-fifth'
-								onClick={handleLiClick}
-							>Community</li>
-							 {/* 
-								here contains duplicates 
-								need sone modification
-							  */}
+							{
+								ArrayList.map((item,index) => {
+									let liItem =  <li
+									className='item-wrap'
+									key = {index}
+									onClick = {(e) => handleLiClick(e,item)}
+									>{item.name}</li>
+									return liItem
+								})
+							}
 						</ul>
 					</nav>
 					<Dropdown overlay={menu} trigger={['click']} placement='topLeft' >
