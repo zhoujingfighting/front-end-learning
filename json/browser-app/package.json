@@ -15,7 +15,8 @@
     "@theia/terminal": "latest",
     "@theia/workspace": "latest",
     "zhoujing-test": "0.0.0",
-    "zhoujing-timeline": "0.0.0"
+    "zhoujing-timeline": "0.0.0",
+    "zhoujing-quickfile": "0.0.0"
   },
   "devDependencies": {
     "@theia/cli": "latest"

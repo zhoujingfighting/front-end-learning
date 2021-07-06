@@ -1,0 +1,1 @@
+{"version":3,"file":"theia-traning-backend-module.js","sourceRoot":"","sources":["../../src/node/theia-traning-backend-module.ts"],"names":[],"mappings":";;AAAA,uCAA4C;AAC5C,gFAA0F;AAC1F,2FAAwF;AAExF,kBAAe,IAAI,2BAAe,CAAC,UAAA,IAAI;IACnC,IAAI,CAAC,qEAAgC,CAAC,CAAC,MAAM,EAAE,CAAC,gBAAgB,EAAE,CAAC;IACnE,IAAI,CAAC,oDAA8B,CAAC,CAAC,SAAS,CAAC,qEAAgC,CAAC,CAAC;AACrF,CAAC,CAAC,CAAC"}

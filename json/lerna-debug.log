@@ -1,0 +1,48 @@
+0 silly input [ 'watch' ]
+1 silly flags { _: [ 'run' ], parallel: true, script: 'watch', args: [] }
+2 verbose rootPath /Users/mima1234/Desktop/git项目/front-end-learning/json
+3 info version 2.4.0
+4 silly existsSync /Users/mima1234/Desktop/git项目/front-end-learning/json/VERSION
+5 silly initialize attempt
+6 silly initialize success
+7 silly execute attempt
+8 info run in 7 package(s): npm run watch
+9 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-filelist' ]
+10 silly getExecOpts {
+10 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@@zhoujing-filelist'
+10 silly getExecOpts }
+11 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-quickfile' ]
+12 silly getExecOpts {
+12 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-quickfile'
+12 silly getExecOpts }
+13 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-test' ]
+14 silly getExecOpts {
+14 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-test'
+14 silly getExecOpts }
+15 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-timeline' ]
+16 silly getExecOpts {
+16 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-timeline'
+16 silly getExecOpts }
+17 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-workspace' ]
+18 silly getExecOpts {
+18 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-workspace'
+18 silly getExecOpts }
+19 silly runScriptInPackageStreaming [ 'watch', [], 'browser-app' ]
+20 silly getExecOpts {
+20 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/browser-app'
+20 silly getExecOpts }
+21 silly runScriptInPackageStreaming [ 'watch', [], 'electron-app' ]
+22 silly getExecOpts {
+22 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/electron-app'
+22 silly getExecOpts }
+23 error execute callback with error
+24 error Error: stdout maxBuffer exceeded
+24 error     at PassThrough.<anonymous> (/Users/mima1234/Desktop/git项目/front-end-learning/json/node_modules/execa/node_modules/get-stream/index.js:30:12)
+24 error     at PassThrough.emit (events.js:228:7)
+24 error     at addChunk (_stream_readable.js:309:12)
+24 error     at readableAddChunk (_stream_readable.js:286:13)
+24 error     at PassThrough.Readable.push (_stream_readable.js:224:10)
+24 error     at PassThrough.Transform.push (_stream_transform.js:150:32)
+24 error     at PassThrough.afterTransform (_stream_transform.js:94:10)
+24 error     at PassThrough._transform (_stream_passthrough.js:44:3)
+24 error     at PassThrough.Transform._read (_stream_transform.js:189:10)

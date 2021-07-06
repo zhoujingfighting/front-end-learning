@@ -1,5 +1,5 @@
 import { injectable } from "inversify";
-import { WidgetOpenHandler,WidgetOpenerOptions, OpenHandler, WidgetFactory} from "@theia/core/lib/browser";
+import { WidgetOpenHandler,WidgetOpenerOptions, OpenHandler, WidgetFactory, FrontendApplicationContribution} from "@theia/core/lib/browser";
 import { CustonmWidget } from "./widgetopen-hander";
 import URI from "@theia/core/lib/common/uri";
 import { interfaces } from "@theia/core/shared/inversify";
@@ -11,8 +11,10 @@ export interface CustomWidgetOptions {
 @injectable()
 export class CustomOpenHandler extends WidgetOpenHandler<CustonmWidget>{
 	readonly id = CustonmWidget.ID
+
 	canHandle(uri:URI):number{
-		console.log(uri.path.ext)
+		console.log(this.id)
+		console.log(uri)
 		if(uri.path.ext === '.json'){
 			return 500
 		}else{
@@ -25,6 +27,7 @@ export class CustomOpenHandler extends WidgetOpenHandler<CustonmWidget>{
 			text:'这是JSON文件'
 		}
 	}
+	
 }
 
 export const bindingCustomOpenHandler = (bind: interfaces.Bind) => {

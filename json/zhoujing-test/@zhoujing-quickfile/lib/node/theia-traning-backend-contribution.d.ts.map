@@ -1,0 +1,1 @@
+{"version":3,"file":"theia-traning-backend-contribution.d.ts","sourceRoot":"","sources":["../../src/node/theia-traning-backend-contribution.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,OAAO,MAAM,SAAS,CAAC;AAEnC,OAAO,EAAE,8BAA8B,EAAE,MAAM,0CAA0C,CAAC;AAG1F,qBACa,gCAAiC,YAAW,8BAA8B;IAEnF,SAAS,CAAC,GAAG,EAAE,OAAO,CAAC,WAAW,GAAG,IAAI;CA+B5C"}

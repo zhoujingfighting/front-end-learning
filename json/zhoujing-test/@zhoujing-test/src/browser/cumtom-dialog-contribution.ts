@@ -8,7 +8,7 @@ export const dialog: Command = {
 	label: 'custom-dialog-test'
 }
 @injectable()
-export class DialogCommandContrinution implements CommandContribution {
+export class DialogCommandContrinution implements CommandContribution, MenuContribution{
 	registerCommands(command: CommandRegistry){
 		command.registerCommand(dialog , {
 			execute:async () => {
@@ -22,10 +22,6 @@ export class DialogCommandContrinution implements CommandContribution {
 			}
 		})
 	}
-}
-
-@injectable()
-export class DialogMenuContribution implements MenuContribution {
 	registerMenus(menu: MenuModelRegistry){
 		menu.registerMenuAction(EditorMainMenu.EXAMPLE,{
 			commandId: dialog.id,
@@ -34,9 +30,14 @@ export class DialogMenuContribution implements MenuContribution {
 	}
 }
 
+// @injectable()
+// export class DialogMenuContribution implements MenuContribution {
+	
+// }
+
 export const bindingDialogContribution = (bind: interfaces.Bind) => {
 	bind(CommandContribution).to(DialogCommandContrinution)
-	bind(MenuContribution).to(DialogMenuContribution)
+	bind(MenuContribution).to(DialogCommandContrinution)
 	bind(CustomDialog).toSelf()
 	bind(CustomDialogProps).toSelf()
 }
