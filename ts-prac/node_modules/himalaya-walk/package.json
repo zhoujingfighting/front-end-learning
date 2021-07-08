@@ -1,0 +1,28 @@
+{
+  "name": "himalaya-walk",
+  "version": "1.0.0",
+  "description": "Walk for himalaya's abstract syntax tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buxlabs/himalaya-walk.git"
+  },
+  "keywords": [
+    "himalaya",
+    "walk",
+    "ast",
+    "javascript"
+  ],
+  "author": "Emil Ajdyna <emil@ajdyna.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buxlabs/himalaya-walk/issues"
+  },
+  "homepage": "https://github.com/buxlabs/himalaya-walk#readme",
+  "devDependencies": {
+    "himalaya": "^1.1.0"
+  }
+}
