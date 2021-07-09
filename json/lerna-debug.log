@@ -1,48 +1,53 @@
-0 silly input [ 'watch' ]
-1 silly flags { _: [ 'run' ], parallel: true, script: 'watch', args: [] }
+0 silly input [ 'prepare' ]
+1 silly flags { _: [ 'run' ], script: 'prepare', args: [] }
 2 verbose rootPath /Users/mima1234/Desktop/git项目/front-end-learning/json
 3 info version 2.4.0
 4 silly existsSync /Users/mima1234/Desktop/git项目/front-end-learning/json/VERSION
 5 silly initialize attempt
 6 silly initialize success
 7 silly execute attempt
-8 info run in 7 package(s): npm run watch
-9 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-filelist' ]
-10 silly getExecOpts {
-10 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@@zhoujing-filelist'
-10 silly getExecOpts }
-11 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-quickfile' ]
-12 silly getExecOpts {
-12 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-quickfile'
-12 silly getExecOpts }
-13 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-test' ]
-14 silly getExecOpts {
-14 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-test'
-14 silly getExecOpts }
-15 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-timeline' ]
-16 silly getExecOpts {
-16 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-timeline'
-16 silly getExecOpts }
-17 silly runScriptInPackageStreaming [ 'watch', [], 'zhoujing-workspace' ]
-18 silly getExecOpts {
-18 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-workspace'
-18 silly getExecOpts }
-19 silly runScriptInPackageStreaming [ 'watch', [], 'browser-app' ]
-20 silly getExecOpts {
-20 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/browser-app'
-20 silly getExecOpts }
-21 silly runScriptInPackageStreaming [ 'watch', [], 'electron-app' ]
-22 silly getExecOpts {
-22 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/electron-app'
-22 silly getExecOpts }
-23 error execute callback with error
-24 error Error: stdout maxBuffer exceeded
-24 error     at PassThrough.<anonymous> (/Users/mima1234/Desktop/git项目/front-end-learning/json/node_modules/execa/node_modules/get-stream/index.js:30:12)
-24 error     at PassThrough.emit (events.js:228:7)
-24 error     at addChunk (_stream_readable.js:309:12)
-24 error     at readableAddChunk (_stream_readable.js:286:13)
-24 error     at PassThrough.Readable.push (_stream_readable.js:224:10)
-24 error     at PassThrough.Transform.push (_stream_transform.js:150:32)
-24 error     at PassThrough.afterTransform (_stream_transform.js:94:10)
-24 error     at PassThrough._transform (_stream_passthrough.js:44:3)
-24 error     at PassThrough.Transform._read (_stream_transform.js:189:10)
+8 silly runScriptInPackageStreaming [ 'prepare', [], 'zhoujing-filelist' ]
+9 silly getExecOpts {
+9 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@@zhoujing-filelist'
+9 silly getExecOpts }
+10 silly runScriptInPackageStreaming [ 'prepare', [], 'zhoujing-quickfile' ]
+11 silly getExecOpts {
+11 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-quickfile'
+11 silly getExecOpts }
+12 silly runScriptInPackageStreaming [ 'prepare', [], 'zhoujing-test' ]
+13 silly getExecOpts {
+13 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-test'
+13 silly getExecOpts }
+14 silly runScriptInPackageStreaming [ 'prepare', [], 'zhoujing-timeline' ]
+15 silly getExecOpts {
+15 silly getExecOpts   cwd: '/Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@zhoujing-timeline'
+15 silly getExecOpts }
+16 error execute callback with error
+17 error Error: Command failed: npm run prepare
+17 error warning package.json: No license field
+17 error warning package.json: No license field
+17 error error Command failed with exit code 2.
+17 error npm ERR! code ELIFECYCLE
+17 error npm ERR! errno 1
+17 error npm ERR! zhoujing-filelist@0.0.0 prepare: `yarn run clean && yarn run build`
+17 error npm ERR! Exit status 1
+17 error npm ERR!
+17 error npm ERR! Failed at the zhoujing-filelist@0.0.0 prepare script.
+17 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+17 error
+17 error npm ERR! A complete log of this run can be found in:
+17 error npm ERR!     /Users/mima1234/.npm/_logs/2021-07-07T01_12_57_155Z-debug.log
+17 error
+17 error
+17 error > zhoujing-filelist@0.0.0 prepare /Users/mima1234/Desktop/git项目/front-end-learning/json/zhoujing-test/@@zhoujing-filelist
+17 error > yarn run clean && yarn run build
+17 error
+17 error yarn run v1.7.0
+17 error $ rimraf lib
+17 error Done in 0.40s.
+17 error yarn run v1.7.0
+17 error $ tsc
+17 error src/browser/file-list-widget.tsx(3,10): error TS6133: 'open' is declared but its value is never read.
+17 error info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+17 error
+17 error     at /Users/mima1234/Desktop/git项目/front-end-learning/json/node_modules/execa/index.js:236:11

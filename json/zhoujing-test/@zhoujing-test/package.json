@@ -1,5 +1,5 @@
 {
-  "name": "zhoujing-test",
+  "name": "zhoujing-testing",
   "keywords": [
     "theia-extension"
   ],
@@ -23,8 +23,8 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/json-frontend-module",
-      "backend": "lib/node/json-backend-module"
+      "frontend": "lib/browser/frontend-module",
+      "backend": "lib/node/backend-module"
     }
   ]
 }

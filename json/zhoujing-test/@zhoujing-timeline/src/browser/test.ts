@@ -1,5 +1,5 @@
 import { Command, CommandContribution, CommandRegistry } from "@theia/core";
-import { inject,injectable } from "inversify";
+import { injectable } from "inversify";
 export const TestCommand: Command = {
 	id: 'Test:command',
 	label:'test command'

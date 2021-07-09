@@ -50,6 +50,8 @@ var inversify_1 = require("inversify");
 var uri_1 = require("@theia/core/lib/common/uri");
 var browser_1 = require("@theia/core/lib/browser");
 var browser_2 = require("@theia/workspace/lib/browser");
+// import { URI } from "vscode-languageserver-types";
+// import {WorkspaceService}
 var TheiaTrainingFrontendContribution = /** @class */ (function () {
     function TheiaTrainingFrontendContribution() {
         this.prefix = 'file';
@@ -72,17 +74,16 @@ var TheiaTrainingFrontendContribution = /** @class */ (function () {
                 }
                 return __awaiter(_this, void 0, void 0, function () {
                     var root;
-                    var _a;
-                    return __generator(this, function (_b) {
-                        switch (_b.label) {
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
                             case 0:
                                 console.log('args', args);
                                 return [4 /*yield*/, this.workspaceService.roots];
                             case 1:
-                                root = _b.sent();
+                                root = _a.sent();
                                 if (root[0]) {
                                     console.log(root[0]);
-                                    this.open((_a = root[0]) === null || _a === void 0 ? void 0 : _a.resource);
+                                    // this.open( root[0]?.resource )
                                 }
                                 return [2 /*return*/];
                         }

@@ -5,8 +5,7 @@ import { open, KeybindingContribution, KeybindingRegistry, FrontendApplicationCo
 import { WorkspaceService } from "@theia/workspace/lib/browser";
 // import { URI } from "vscode-languageserver-types";
 // import {WorkspaceService}
-import { FileStat } from "@theia/filesystem/lib/common/files";
-import { loggerPath } from "@theia/core/lib/common/logger-protocol";
+
 @injectable()
 export class TheiaTrainingFrontendContribution implements CommandContribution, MenuContribution, KeybindingContribution, FrontendApplicationContribution, QuickOpenContribution {
 
@@ -43,7 +42,6 @@ export class TheiaTrainingFrontendContribution implements CommandContribution, M
 					console.log(root[0])
 					// this.open( root[0]?.resource )
 				}
-				
 			},
 			isEnabled: () => this.workspaceService.tryGetRoots().length > 0 ,
 			isVisible: () => this.workspaceService.tryGetRoots().length > 0
