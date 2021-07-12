@@ -51,3 +51,9 @@ The `@theia/editor` extension contributed functionality such as the `editor` wid
 
 `@theia/editor`这个扩展包为`editor`widget，菜单，快捷键绑定，导航等提供功能选项
 
+### timeline
+
+The `@theia/timeline` extension adds Timeline view for visualizing time-series events
+
+`@theia/timeline`模块是为可视化时间系列事件提供时间线视角
+
